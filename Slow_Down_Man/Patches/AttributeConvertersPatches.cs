@@ -18,7 +18,7 @@ namespace SlowDownMod
         {
             public static void Postfix(ref Klei.AI.AttributeConverter ___ImmuneLevelBoost, ref Klei.AI.AttributeConverter ___RanchingEffectDuration, ref Klei.AI.AttributeConverter ___FarmedEffectDuration, ref Klei.AI.AttributeConverter ___PowerTinkerEffectDuration)
             {
-                //Debug.Log("AttributeConverters Constructor Patch");
+                DebugLog("AttributeConverters Constructor Patch");
                 /*if (modifyValues)
                 {*/
                     ___ImmuneLevelBoost.baseValue *= cycleLengthModifier;

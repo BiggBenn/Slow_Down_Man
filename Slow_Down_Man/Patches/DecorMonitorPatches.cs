@@ -31,12 +31,6 @@ namespace SlowDownMod
         [HarmonyPatch("GetTodaysAverageDecor")]
         public class DecorMonitorInstance_GetTodaysAverageDecor_Patch
         {
-            /*public static bool Prefix(ref float __result, float ___cycleTotalDecor)
-            {
-                __result = ___cycleTotalDecor / GameClock.Instance.GetTimeSinceStartOfCycle();
-                return false;
-            }*/
-
             public static void PostFix(ref float __result)
             {
                 __result /= cycleLengthModifier;
@@ -47,12 +41,6 @@ namespace SlowDownMod
         [HarmonyPatch("GetYesterdaysAverageDecor")]
         public class DecorMonitorInstance_GetYesterdaysAverageDecor_Patch
         {
-            /*public static bool Prefix(ref float __result, float ___yesterdaysTotalDecor)
-            {
-                __result = ___yesterdaysTotalDecor / GameClock.Instance.GetTimeSinceStartOfCycle();
-                return false;
-            }*/
-
             public static void PostFix(ref float __result)
             {
                 __result /= cycleLengthModifier;

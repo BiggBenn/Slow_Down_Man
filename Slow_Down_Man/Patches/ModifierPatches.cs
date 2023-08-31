@@ -18,62 +18,62 @@ namespace SlowDownMod
         {
             public static void Prefix(ref Klei.AI.AttributeModifier modifier)
             {
-                //Debug.Log("Modifier Add Postfix");
+                DebugLog("Modifier Add Postfix");
                 /*if (modifyValues)
                 {*/
                     //if we intercept a calorie usage attribute set, change it
                     if (modifier.AttributeId == Db.Get().Amounts.Calories.deltaAttribute.Id)
                     {
                         modifier.SetValue(modifier.Value / cycleLengthModifier);
-                        //Debug.Log("Intercepted calorie usage rate attribute");
+                        DebugLog("Intercepted calorie usage rate attribute");
                     }
                     //do the same for stamina usage
                     else if (modifier.AttributeId == Db.Get().Amounts.Stamina.deltaAttribute.Id)
                     {
                         modifier.SetValue(modifier.Value / cycleLengthModifier);
-                        //Debug.Log("Intercepted stamina usage attribute");
+                        DebugLog("Intercepted stamina usage attribute");
                     }
                     //do the same for bladder increase
                     else if (modifier.AttributeId == Db.Get().Amounts.Bladder.deltaAttribute.Id)
                     {
                         modifier.SetValue(modifier.Value / cycleLengthModifier);
-                        //Debug.Log("Intercepted bladder rate attribute");
+                        DebugLog("Intercepted bladder rate attribute");
                     }
                     //do the same for Stress increase
                     else if (modifier.AttributeId == Db.Get().Amounts.Stress.deltaAttribute.Id)
                     {
                         modifier.SetValue(modifier.Value / cycleLengthModifier);
-                        //Debug.Log("Intercepted Stress rate attribute");
+                        DebugLog("Intercepted Stress rate attribute");
                     }
                     //do the same for Fertilization increase
                     else if (modifier.AttributeId == Db.Get().Amounts.Fertilization.deltaAttribute.Id)
                     {
                         modifier.SetValue(modifier.Value / cycleLengthModifier);
-                        //Debug.Log("Intercepted Fertilization rate attribute");
+                        DebugLog("Intercepted Fertilization rate attribute");
                     }
                     //do the same for Incubation increase
                     else if (modifier.AttributeId == Db.Get().Amounts.Incubation.deltaAttribute.Id)
                     {
                         modifier.SetValue(modifier.Value / cycleLengthModifier);
-                        //Debug.Log("Intercepted Incubation rate attribute");
+                        DebugLog("Intercepted Incubation rate attribute");
                     }
                     //do the same for RadiationRecovery
                     else if (modifier.AttributeId == Db.Get().Attributes.RadiationRecovery.Id)
                     {
                         modifier.SetValue(modifier.Value / cycleLengthModifier);
-                        //Debug.Log("Intercepted RadiationRecovery rate attribute");
+                        DebugLog("Intercepted RadiationRecovery rate attribute");
                     }
                     //do the same for DiseaseCureSpeed
                     else if (modifier.AttributeId == Db.Get().Attributes.DiseaseCureSpeed.Id)
                     {
                         modifier.SetValue(modifier.Value / cycleLengthModifier);
-                        //Debug.Log("Intercepted DiseaseCureSpeed rate attribute");
+                        DebugLog("Intercepted DiseaseCureSpeed rate attribute");
                     }
                     //do the same for air consumption
                     else if (modifier.AttributeId == Db.Get().Attributes.AirConsumptionRate.Id)
                     {
                         modifier.SetValue(modifier.Value / cycleLengthModifier);
-                        //Debug.Log("Intercepted air consumption rate attribute");
+                        DebugLog("Intercepted air consumption rate attribute");
                     }
                 //}
             }

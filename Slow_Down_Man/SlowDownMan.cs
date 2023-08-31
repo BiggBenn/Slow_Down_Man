@@ -7,6 +7,14 @@ namespace SlowDownMod
 {
     public partial class SlowDownMan : UserMod2
     {
+        //Custom log function to override only in debug builds
+        public static void DebugLog(string msg)
+        {
+#if DEBUG
+            Debug.Log(msg);
+#endif
+        }
+
         static float cycleLengthModifier = 2.5f;
         static float cycleLength = cycleLengthModifier * 600.0f;
         static float dayLength = cycleLength * 0.875f;
@@ -51,9 +59,9 @@ namespace SlowDownMod
 
                             alsoExtendNegative = bool.Parse(segments[alsoExtendBadLabelIndex + 1]);*/
 
-                            Debug.Log("Loaded config values");
-                            Debug.Log("DayLengthMultiplier=" + cycleLengthModifier);
-                            //Debug.Log("ModifyValues=" + modifyValues);
+                            DebugLog("Loaded config values");
+                            DebugLog("DayLengthMultiplier=" + cycleLengthModifier);
+                            //DebugLog("ModifyValues=" + modifyValues);
                             //Debug.Log("AlsoModifyBadEffects=" + alsoExtendNegative);
                         }
                         catch (System.Exception e)

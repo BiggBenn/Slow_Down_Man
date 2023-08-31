@@ -20,17 +20,17 @@ namespace SlowDownMod
         {
             public static bool Prefix(GameClock __instance, ref float ___time, ref int ___cycle, ref float ___timeSinceStartOfCycle)
             {
-                if (___time == 0.0f)
-                    return false;
-                //Debug.Log("OnDeserialized Prefix Start");
-                //Debug.Log("Initial values::    Time: " + ___time + " Cycle: " + ___cycle + " Time Since Cycle start: " + ___timeSinceStartOfCycle);
-                ___cycle = (int)(___time / cycleLength);
-                //Debug.Log("Cycle: " + ___cycle);
-                ___timeSinceStartOfCycle = UnityEngine.Mathf.Max(___time - (float)___cycle * cycleLength, 0.0f);
-                //Debug.Log("Time since start of cycle: " + ___timeSinceStartOfCycle);
-                //Debug.Log("OnDeserialized Prefix End");
-                //Debug.Log("Skipping real function");
-                ___time = 0.0f;
+                if (___time != 0.0f)
+                {
+                    DebugLog("Initial values::    Time: " + ___time + " Cycle: " + ___cycle + " Time Since Cycle start: " + ___timeSinceStartOfCycle);
+                    ___cycle = (int)(___time / cycleLength);
+                    DebugLog("Cycle: " + ___cycle);
+                    ___timeSinceStartOfCycle = UnityEngine.Mathf.Max(___time - (float)___cycle * cycleLength, 0.0f);
+                    DebugLog("Time since start of cycle: " + ___timeSinceStartOfCycle);
+                    ___time = 0.0f;
+                }
+
+                //skip original method
                 return false;
             }
         }
@@ -57,14 +57,12 @@ namespace SlowDownMod
 
                 if (!___isNight && __instance.IsNighttime())
                 {
-                    //Debug.Log("Triggering Nighttime");
                     ___isNight = true;
                     __instance.Trigger(-722330267, (object)null);
                 }
 
                 if (___isNight && !__instance.IsNighttime())
                 {
-                    //Debug.Log("Triggering Daytime");
                     ___isNight = false;
                 }
 

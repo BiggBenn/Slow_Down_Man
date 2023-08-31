@@ -18,10 +18,8 @@ namespace SlowDownMod
         {
             public static void Postfix(ref Klei.AI.AttributeModifier ___aging)
             {
-                //Debug.Log("AgeMonitor InitializeStates postfix");
-                //float value = ___aging.Value;
+                DebugLog("AgeMonitor InitializeStates postfix, Modified aging deltaattribute from " + ___aging.Value + " to " + ___aging.Value/cycleLengthModifier);
                 ___aging.SetValue(___aging.Value / cycleLengthModifier);
-                //Debug.Log("Modified aging deltaattribute from " + value + " to " + ___aging.Value);
             }
         }
     }

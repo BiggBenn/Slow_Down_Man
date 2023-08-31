@@ -26,10 +26,6 @@ namespace SlowDownMod
                 {
                     __result *= cycleLengthModifier;
                 }
-                else
-                {
-                    //__result /= cycleLengthModifier;
-                }
             }
         }
 
@@ -43,10 +39,6 @@ namespace SlowDownMod
                 if (timeSlice == GameUtil.TimeSlice.PerCycle)
                 {
                     __result *= cycleLengthModifier;
-                }
-                else
-                {
-                    //__result /= cycleLengthModifier;
                 }
             }
         }
