@@ -100,6 +100,7 @@
     <Compile Include="Patches\Deactivated\AttributeModifierPatches.cs" />
     <Compile Include="Patches\Deactivated\AmountPatches.cs" />
     <Compile Include="Patches\Deactivated\AmountsPatches.cs" />
+    <Compile Include="Patches\BaseBatteryConfigPatches.cs" />
     <Compile Include="Patches\ReportManagerPatches.cs" />
     <Compile Include="Patches\Unimplemented\AllResourcesScreenPatches.cs" />
     <Compile Include="Patches\Unimplemented\AllDiagnosticsScreenPatches.cs" />
