@@ -14,7 +14,7 @@ namespace SlowDownMod
          */
         [HarmonyPatch(typeof(ReportManager))]
         [HarmonyPatch("ReportValue")]
-        public class Db_Initialize_Patch
+        public class ReportManager_ReportValue_Patch
         {
             public static void Prefix(ReportManager.ReportType reportType, ref float value)
             {
