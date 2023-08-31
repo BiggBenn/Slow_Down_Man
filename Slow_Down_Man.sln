@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33530.505
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SlowDownMan", "ONI Mod1\SlowDownMan.csproj", "{576B7179-7294-424F-9A76-69C9FADA71EE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "..\..\Decompiled\Assembly-CSharp\Assembly-CSharp.csproj", "{69544FD3-E0CB-4F88-A0ED-20272851BF0A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{576B7179-7294-424F-9A76-69C9FADA71EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{576B7179-7294-424F-9A76-69C9FADA71EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{576B7179-7294-424F-9A76-69C9FADA71EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{576B7179-7294-424F-9A76-69C9FADA71EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69544FD3-E0CB-4F88-A0ED-20272851BF0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69544FD3-E0CB-4F88-A0ED-20272851BF0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69544FD3-E0CB-4F88-A0ED-20272851BF0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69544FD3-E0CB-4F88-A0ED-20272851BF0A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2ED57BC5-9AB7-4641-AD09-DD97FB193B67}
+	EndGlobalSection
+EndGlobal
